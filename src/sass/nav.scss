@@ -1,0 +1,14 @@
+// NAV STILES
+.nav.wrapper {
+    padding-block: 0;
+  }
+  .nav {
+    height: 120px;
+    display: flex;
+    align-items: center;
+  
+    &__button {
+      margin-left: auto;
+    }
+  }
+  

@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.3;
+  text-rendering: optimizeSpeed;
+  font-family: "Barlow", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-block: 80px;
+  overflow: hidden;
+}
+
+.title__h1 {
+  font: 900 3.5rem/3.5rem "Barlow", sans-serif;
+  text-transform: uppercase;
+  color: hsl(220, 50%, 17%);
+  user-select: none;
+}
+.title__h2 {
+  text-transform: uppercase;
+  color: hsl(220, 50%, 17%);
+  user-select: none;
+  font: 900 2.2rem/2.8rem "Barlow", sans-serif;
+}
+.title__h3 {
+  text-transform: uppercase;
+  color: hsl(220, 50%, 17%);
+  user-select: none;
+  font: 900 1.5rem/1.75rem "Barlow", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.copy__paragraph {
+  font: 400 1rem/1.625rem "Barlow", sans-serif;
+  color: hsl(221, 23%, 58%);
+  user-select: none;
+}
+
+.button {
+  font: 700 1rem/1.625rem "Barlow", sans-serif;
+  padding: 1rem 1.625rem;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 0.55rem;
+  transition: all ease 250ms;
+}
+
+.nav button {
+  background: -webkit-linear-gradient(90deg, #f05205, #ff9600, #ffd000);
+  background: linear-gradient(90deg, #f05205, #ff9600, #ffd000);
+}
+
+.nav button:hover,
+.nav button:active {
+  background: -webkit-linear-gradient(90deg, #fff100, #e60012);
+  background: linear-gradient(90deg, #fff100, #e60012);
+}
+
+.button:active {
+  opacity: 0.5;
+}
+
+.hero button {
+  background: -webkit-linear-gradient(90deg, #cc1253, #640089, #561b94);
+  background: linear-gradient(90deg, #cc1253, #640089, #561b94);
+  text-align: center;
+}
+
+.hero button:hover,
+.hero button:active {
+  background: -webkit-linear-gradient(90deg, #c94db4, #0f207a);
+  background: linear-gradient(90deg, #c94db4, #0f207a);
+}
+
+.nav__figure img,
+.items__icons {
+  transition: all 500ms;
+}
+
+.nav__figure img:hover,
+.items__icons:hover {
+  filter: invert(1);
+}
+
+.nav {
+  animation: myAnimNAV 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnimNAV {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateX(-48px);
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateX(-26px);
+  }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateX(-13px);
+  }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateX(-6.5px);
+  }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateX(-4px);
+  }
+  25%, 55%, 75%, 87%, 98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.nav.wrapper {
+  padding-block: 0;
+}
+
+.nav {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.nav__button {
+  margin-left: auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2.5% repeat(8, 1fr) 2.5%;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: ". t t t t k k k k . " ". p p g g g tx2 tx2 tx2. ";
+  row-gap: 2.5rem;
+  column-gap: 2.5rem;
+}
+.hero__picture {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.hero__picture img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__texts, .hero__below {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+}
+.hero__texts {
+  grid-area: t;
+}
+.hero__texts p {
+  max-width: 450px;
+}
+.hero__k {
+  grid-area: k;
+}
+.hero__p {
+  grid-area: p;
+}
+.hero__g {
+  grid-area: g;
+}
+.hero__below {
+  grid-area: tx2;
+  text-align: center;
+}
+.hero__release {
+  font: 900 1rem/2rem "Barlow", sans-serif;
+  text-transform: uppercase;
+  color: hsl(221, 23%, 58%);
+  letter-spacing: 1px;
+  border-bottom: solid thin hsl(221, 23%, 58%);
+}
+.hero__btnAndRelease {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 2.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 15.9375rem;
+  height: 15rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #e8eff2 2%, #dee5e8 48.45%);
+  border-radius: 1.25rem;
+}
+
+.hero::before {
+  left: -12.5625rem;
+  bottom: 18.8rem;
+}
+
+.hero::after {
+  top: 6.2rem;
+  right: -12.5625rem;
+}
+
+.hero__picture {
+  position: relative;
+}
+
+.hero__picture::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: center;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(90deg, #350061, #550fbd, #4b45ed);
+  background: linear-gradient(90deg, #350061, #550fbd, #4b45ed);
+  opacity: 0.5;
+}
+
+.hero__picture:nth-last-child(2)::before {
+  background: -webkit-linear-gradient(90deg, #4d474e, #282f32, #e51e1b);
+  background: linear-gradient(90deg, #4d474e, #282f32, #e51e1b);
+}
+
+.hero__picture:nth-last-child(3)::before {
+  background: -webkit-linear-gradient(90deg, #f97c15, #fff81f, #fb2dce, #5cd6ff);
+  background: linear-gradient(90deg, #f97c15, #fff81f, #fb2dce, #5cd6ff);
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 2.5% repeat(6, 1fr) 2.5%;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: ". highly highly wireless wireless battery battery ." ". . . vacklit vacklit . . . ";
+  row-gap: 2rem;
+  gap: 2rem;
+}
+.items__item {
+  max-width: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.items__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background-color: rgb(255, 111, 27);
+}
+.items__highly {
+  grid-area: highly;
+}
+.items__wireless {
+  grid-area: wireless;
+}
+.items__battery {
+  grid-area: battery;
+}
+.items__vacklit {
+  grid-area: vacklit;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-block: 60px;
+  }
+  .nav {
+    height: 100px;
+  }
+  .hero__below {
+    text-align: start;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: 2.5% repeat(4, 1fr) 2.5%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: ". highly highly wireless wireless   ." ". battery battery vacklit vacklit  . ";
+  }
+}
+@media (max-width: 954px) {
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+}
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: " t t t t k k k k " " p p g g g tx2 tx2 tx2 ";
+    row-gap: 5rem;
+    column-gap: 2.5rem;
+  }
+}
+@media (max-width: 749px) {
+  .title__h1 {
+    font-size: 3.2rem;
+  }
+  .hero__k {
+    transform: translate(20px);
+  }
+  .hero {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: " t t  k k " " p  g g g " " tx2 tx2 tx2 tx2";
+    row-gap: 5rem;
+    column-gap: 2.5rem;
+  }
+  .hero__below {
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+}
+@media (max-width: 426px) {
+  .wrapper {
+    padding-block: 40px;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "t t t " "k k k" "p g g" "tx2 tx2 tx2";
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+  .hero__texts {
+    text-align: center;
+  }
+  .hero__k {
+    transform: translate(0);
+  }
+  .hero__below {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "highly " "wireless" " battery  " "vacklit";
+  }
+}
+
+/*# sourceMappingURL=wed.css.map */

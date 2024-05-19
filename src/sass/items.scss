@@ -1,0 +1,45 @@
+// ITEMS
+.items {
+  display: grid;
+  grid-template-columns: 2.5% repeat(6, 1fr) 2.5%;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    ". highly highly wireless wireless battery battery ."
+    ". . . vacklit vacklit . . . ";
+
+  row-gap: 2rem;
+  gap: 2rem;
+
+  &__item {
+    max-width: 450px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    background-color: $orange;
+  }
+  &__highly {
+    grid-area: highly;
+  }
+  &__wireless {
+    grid-area: wireless;
+  }
+  &__battery {
+    grid-area: battery;
+  }
+  &__vacklit {
+    grid-area: vacklit;
+  }
+}

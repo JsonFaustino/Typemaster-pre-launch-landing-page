@@ -1,0 +1,122 @@
+// HEADER ESTILES
+.hero {
+  display: grid;
+  grid-template-columns: 2.5% repeat(8, 1fr) 2.5%;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: ". t t t t k k k k . " // keyboard and texts
+    ". p p g g g tx2 tx2 tx2. "; // Phone Glas Keyboard and texts2
+  row-gap: 2.5rem;
+  column-gap: 2.5rem;
+  &__picture {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  &__picture img {
+    max-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+  &__texts,
+  &__below {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    row-gap: 2rem;
+  }
+  &__texts {
+    grid-area: t; // Texts 1
+  }
+  &__texts p {
+    max-width: 450px;
+  }
+  &__k {
+    grid-area: k; // keyboard
+  }
+  &__p {
+    grid-area: p; // Phone
+  }
+  &__g {
+    grid-area: g; // Glass Keyboard
+  }
+  &__below {
+    grid-area: tx2; // Texts 2
+    text-align: center;
+  }
+
+  // Buttons and release
+  &__release {
+    font: 900 1rem/2rem $font-family;
+    text-transform: uppercase;
+    color: $light-blue;
+    letter-spacing: 1px;
+
+    border-bottom: solid thin $light-blue;
+  }
+  &__btnAndRelease {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2.5rem;
+
+    align-items: center;
+    text-align: center;
+  }
+}
+
+// AFTER AND BEFORE
+.hero {
+  position: relative;
+}
+.hero::before,
+.hero::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 15.9375rem;
+  height: 15rem;
+  opacity: 70%;
+  background: linear-gradient(42.85deg, #e8eff2 2%, #dee5e8 48.45%);
+  border-radius: 1.25rem;
+}
+.hero::before {
+  left: -12.5625rem;
+  bottom: 18.8rem;
+}
+.hero::after {
+  top: 6.2rem;
+  right: -12.5625rem;
+}
+
+.hero__picture {
+  position: relative;
+}
+.hero__picture::before {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: center;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(90deg, #350061, #550fbd, #4b45ed);
+  background: linear-gradient(90deg, #350061, #550fbd, #4b45ed);
+  opacity: 0.5;
+}
+.hero__picture:nth-last-child(2)::before {
+  background: -webkit-linear-gradient(90deg, #4d474e, #282f32, #e51e1b);
+  background: linear-gradient(90deg, #4d474e, #282f32, #e51e1b);
+}
+.hero__picture:nth-last-child(3)::before {
+  background: -webkit-linear-gradient(
+    90deg,
+    #f97c15,
+    #fff81f,
+    #fb2dce,
+    #5cd6ff
+  );
+  background: linear-gradient(90deg, #f97c15, #fff81f, #fb2dce, #5cd6ff);
+}

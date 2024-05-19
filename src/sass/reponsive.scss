@@ -1,0 +1,111 @@
+//  1024PX //////////////////////////////////
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-block: 60px;
+  }
+  .nav {
+    height: 100px;
+  }
+  .hero__below {
+    text-align: start;
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: 2.5% repeat(4, 1fr) 2.5%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      ". highly highly wireless wireless   ."
+      ". battery battery vacklit vacklit  . ";
+  }
+}
+
+//  954PX //////////////////////////////////
+@media (max-width: 954px) {
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+}
+
+//  920PX //////////////////////////////////
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: " t t t t k k k k " // keyboard and texts
+      " p p g g g tx2 tx2 tx2 "; // Phone Glas Keyboard and texts2
+    row-gap: 5rem;
+    column-gap: 2.5rem;
+  }
+}
+
+
+//  749PX //////////////////////////////////
+@media (max-width: 749px) {
+  .title {
+    &__h1 {
+      font-size: 3.2rem;
+    }
+  }
+  .hero__k {
+    transform: translate(20px);
+  }
+  .hero {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      " t t  k k "
+      " p  g g g "
+      " tx2 tx2 tx2 tx2";
+    row-gap: 5rem;
+    column-gap: 2.5rem;
+  }
+  .hero__below {
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+}
+
+
+//  426PX //////////////////////////////////
+@media (max-width: 426px) {
+  .wrapper {
+    $pd-wrapper: 40px;
+    padding-block: $pd-wrapper;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "t t t "
+      "k k k"
+      "p g g"
+      "tx2 tx2 tx2";
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+
+    &__texts {
+      text-align: center;
+    }
+    &__k {
+      transform: translate(0);
+    }
+    &__below {
+      flex-direction: column;
+      text-align: center;
+
+      row-gap: 1rem;
+    }
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "highly "
+      "wireless"
+      " battery  "
+      "vacklit";
+  }
+}
+
+
